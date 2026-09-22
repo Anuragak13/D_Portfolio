@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Anurag Kumar — Cloud Engineer focused on AWS, DevOps, Linux, automation and scalable cloud infrastructure.">
+
+<meta name="keywords"
+content="Anurag Kumar, Cloud Engineer, AWS, DevOps, Linux, Cloud Support, Portfolio">
+
+<meta name="author" content="Anurag Kumar">
+<meta name="theme-color" content="#264653">
+
+<title>Anurag Kumar | Cloud Engineer</title>
+
+<style>
+:root{
+    --bg:#264653;
+    --surface:rgba(38,70,83,.82);
+    --surface2:#203d49;
+    --text:#fffaf0;
+    --muted:#d6d7ce;
+    --line:rgba(233,196,106,.2);
+
+    --charcoal:#264653;
+    --verdigris:#2a9d8f;
+    --jasmine:#e9c46a;
+    --sandy:#f4a261;
+    --burnt:#e76f51;
+
+    --cyan:#2a9d8f;
+    --violet:#e9c46a;
+    --pink:#e76f51;
+    --green:#f4a261;
+
+    --shadow:0 20px 70px rgba(20,35,42,.38);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,
+    BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(42,157,143,.16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(231,111,81,.14),
+            transparent 30%
+        ),
+        var(--bg);
+
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+body.light{
+    --bg:#f5f7f4;
+    --surface:rgba(255,255,255,.86);
+    --surface2:#fff;
+    --text:#18323c;
+    --muted:#56666c;
+    --line:rgba(38,70,83,.14);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf0,
+            #edf7f5
+        );
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea{
+    font:inherit;
+}
+
+.container{
+    width:min(1120px,92%);
+    margin:auto;
+}
+
+.section{
+    padding:96px 0;
+    position:relative;
+}
+
+.eyebrow{
+    color:var(--jasmine);
+    font-size:.78rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    font-weight:800;
+}
+
+.section-title{
+    font-size:clamp(2rem,4vw,3.2rem);
+    line-height:1.1;
+    margin:10px 0 14px;
+}
+
+.section-lead{
+    max-width:720px;
+    color:var(--muted);
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    z-index:50;
+    top:16px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(1120px,94%);
+
+    padding:12px 16px;
+
+    border:1px solid var(--line);
+    background:rgba(38,70,83,.78);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+body.light nav{
+    background:rgba(255,255,255,.8);
+}
+
+.nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+}
+
+.brand{
+    font-weight:900;
+    letter-spacing:.05em;
+}
+
+.brand span{
+    color:var(--burnt);
+}
+
+.links{
+    display:flex;
+    gap:5px;
+    align-items:center;
+}
+
+.links a{
+    font-size:.82rem;
+    color:var(--muted);
+    padding:8px 10px;
+    border-radius:10px;
+    transition:.25s;
+}
+
+.links a:hover,
+.links a.active{
+    color:var(--text);
+    background:rgba(42,157,143,.15);
+}
+
+.nav-actions{
+    display:flex;
+    gap:8px;
+}
+
+.icon-btn,
+.menu-btn{
+    border:1px solid var(--line);
+    background:var(--surface);
+    color:var(--text);
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.menu-btn{
+    display:none;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:grid;
+    align-items:center;
+    padding-top:120px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:clamp(3.4rem,8vw,7rem);
+    line-height:.9;
+    letter-spacing:-.07em;
+    margin:16px 0;
+}
+
+.gradient-text{
+    background:
+        linear-gradient(
+            90deg,
+            var(--verdigris),
+            var(--jasmine),
+            var(--burnt)
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.hero h2{
+    font-size:clamp(1.1rem,2.4vw,1.55rem);
+    color:var(--muted);
+    font-weight:600;
+}
+
+.hero p{
+    max-width:650px;
+    color:var(--muted);
+    font-size:1.05rem;
+    margin:22px 0;
+}
+
+.actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    padding:12px 17px;
+
+    border-radius:12px;
+    border:1px solid var(--line);
+
+    font-weight:800;
+    font-size:.9rem;
+
+    transition:.25s;
+    cursor:pointer;
+}
+
+.btn.primary{
+    border:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--verdigris),
+            var(--jasmine)
+        );
+
+    color:#18323c;
+
+    box-shadow:
+        0 10px 35px rgba(42,157,143,.22);
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+/* CLOUD VISUAL */
+
+.cloud-art{
+    position:relative;
+    aspect-ratio:1;
+    max-width:470px;
+    margin:auto;
+    display:grid;
+    place-items:center;
+}
+
+.orb{
+    position:absolute;
+
+    width:70%;
+    height:70%;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(42,157,143,.4),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 70% 70%,
+            rgba(231,111,81,.35),
+            transparent 32%
+        ),
+        rgba(233,196,106,.08);
+
+    box-shadow:
+        0 0 100px rgba(42,157,143,.16),
+        inset 0 0 70px rgba(233,196,106,.18);
+}
+
+.orbit{
+    position:absolute;
+    border:1px solid rgba(233,196,106,.3);
+    border-radius:50%;
+    transform:rotate(-20deg);
+}
+
+.o1{
+    width:88%;
+    height:38%;
+}
+
+.o2{
+    width:70%;
+    height:70%;
+    transform:rotate(60deg);
+}
+
+.o3{
+    width:45%;
+    height:92%;
+    transform:rotate(110deg);
+}
+
+.cloud-card{
+    position:relative;
+    width:250px;
+
+    padding:25px;
+
+    border:1px solid rgba(42,157,143,.35);
+    border-radius:22px;
+
+    background:rgba(32,61,73,.78);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.4);
+}
+
+body.light .cloud-card{
+    background:rgba(255,255,255,.76);
+}
+
+.terminal{
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        monospace;
+
+    font-size:.78rem;
+    color:#b9c4dc;
+}
+
+.prompt{
+    color:var(--sandy);
+}
+
+.cloud-icon{
+    font-size:4rem;
+    margin:14px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--verdigris),
+            var(--jasmine)
+        );
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    gap:18px;
+}
+
+.skills{
+    grid-template-columns:repeat(4,1fr);
+    margin-top:34px;
+}
+
+.card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:22px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(42,157,143,.45);
+}
+
+.card h3{
+    margin-bottom:14px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.tag{
+    padding:6px 9px;
+    border-radius:9px;
+
+    background:rgba(42,157,143,.10);
+    border:1px solid var(--line);
+
+    font-size:.78rem;
+    color:var(--muted);
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:28px;
+    align-items:stretch;
+}
+
+.about-stat{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-top:18px;
+}
+
+.stat strong{
+    font-size:1.8rem;
+    color:var(--jasmine);
+}
+
+.stat span{
+    display:block;
+    color:var(--muted);
+    font-size:.82rem;
+}
+
+/* PROJECTS */
+
+.projects{
+    grid-template-columns:repeat(3,1fr);
+    margin-top:34px;
+}
+
+.project-top{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.project-num{
+    color:var(--jasmine);
+    font-weight:900;
+}
+
+.project p{
+    color:var(--muted);
+    font-size:.9rem;
+    margin:14px 0;
+}
+
+.project .tags{
+    margin-bottom:18px;
+}
+
+.project-links{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.small-btn{
+    padding:8px 10px;
+
+    border:1px solid var(--line);
+    border-radius:9px;
+
+    font-size:.76rem;
+    font-weight:800;
+
+    transition:.2s;
+}
+
+.small-btn:hover{
+    background:var(--verdigris);
+    color:#fff;
+}
+
+.filterbar{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:24px;
+}
+
+.filter{
+    background:var(--surface);
+    color:var(--muted);
+    border:1px solid var(--line);
+
+    padding:8px 12px;
+
+    border-radius:999px;
+    cursor:pointer;
+}
+
+.filter.active{
+    color:var(--text);
+    border-color:var(--verdigris);
+    background:rgba(42,157,143,.16);
+}
+
+/* EXPERIENCE */
+
+.timeline{
+    position:relative;
+
+    margin-top:35px;
+    padding-left:25px;
+
+    border-left:1px solid rgba(42,157,143,.35);
+}
+
+.timeline-item{
+    position:relative;
+    padding:0 0 32px 25px;
+}
+
+.timeline-item:before{
+    content:'';
+
+    position:absolute;
+    left:-31px;
+    top:5px;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--verdigris);
+
+    box-shadow:
+        0 0 18px var(--verdigris);
+}
+
+.timeline-item h3{
+    font-size:1.1rem;
+}
+
+.timeline-item .meta{
+    color:var(--jasmine);
+    font-size:.8rem;
+    margin:4px 0;
+}
+
+.timeline-item p{
+    color:var(--muted);
+}
+
+/* RESUME */
+
+.resume-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:30px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:30px;
+}
+
+.contact-list{
+    margin-top:24px;
+    display:grid;
+    gap:12px;
+}
+
+.contact-item{
+    padding:14px;
+
+    border:1px solid var(--line);
+    border-radius:13px;
+
+    background:var(--surface);
+}
+
+.contact-item small{
+    display:block;
+    color:var(--muted);
+}
+
+form{
+    display:grid;
+    gap:13px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:13px;
+}
+
+input,
+textarea{
+    width:100%;
+
+    border:1px solid var(--line);
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    padding:13px 14px;
+
+    border-radius:12px;
+
+    outline:none;
+}
+
+input:focus,
+textarea:focus{
+    border-color:var(--verdigris);
+
+    box-shadow:
+        0 0 0 3px rgba(42,157,143,.10);
+}
+
+textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+.error{
+    font-size:.78rem;
+    color:var(--burnt);
+    display:none;
+}
+
+.success{
+    color:var(--sandy);
+    font-size:.85rem;
+    display:none;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 0;
+
+    border-top:1px solid var(--line);
+
+    color:var(--muted);
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    align-items:center;
+}
+
+.socials{
+    display:flex;
+    gap:8px;
+}
+
+.socials a{
+    padding:8px 10px;
+
+    border:1px solid var(--line);
+    border-radius:10px;
+
+    transition:.2s;
+}
+
+.socials a:hover{
+    background:var(--verdigris);
+    color:white;
+}
+
+/* ANIMATION */
+
+.reveal{
+    opacity:0;
+    transform:translateY(22px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:none;
+}
+
+.hide{
+    display:none!important;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:980px){
+
+    .links{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .skills{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .projects{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cloud-art{
+        order:-1;
+        max-width:360px;
+    }
+
+    .hero{
+        padding-top:130px;
+    }
+
+    .resume-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:620px){
+
+    .section{
+        padding:70px 0;
+    }
+
+    .skills,
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    .cloud-art{
+        max-width:300px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="nav-inner container">
+
+<a class="brand" href="#home">
+ANURAG<span>.</span>
+</a>
+
+<div class="links" id="navLinks">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#certifications">Certifications</a>
+<a href="#resume">Resume</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<div class="nav-actions">
+
+<button
+class="icon-btn"
+id="themeBtn"
+aria-label="Toggle dark and light mode">
+☼
+</button>
+
+<button
+class="menu-btn"
+id="menuBtn"
+aria-label="Open menu">
+☰
+</button>
+
+</div>
+</div>
+</nav>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div class="reveal">
+
+<div class="eyebrow">
+Cloud Engineer · 2026 Graduate
+</div>
+
+<h1>
+ANURAG<br>
+<span class="gradient-text">KUMAR</span>
+</h1>
+
+<h2>
+Cloud Engineer | AWS | DevOps | Linux
+</h2>
+
+<p>
+IT and Computer Science graduate with hands-on experience in AWS
+cloud computing, zero-trust security, networking, scripting,
+containerization, and modern development workflows.
+</p>
+
+<div class="actions">
+
+<a class="btn primary" href="#projects">
+View Projects
+</a>
+
+<a
+class="btn"
+href="mailto:akd130703@gmail.com?subject=Resume%20Request">
+Request Resume
+</a>
+
+<a class="btn" href="#contact">
+Contact Me
+</a>
+
+<a
+class="btn"
+href="https://github.com/Anuragak13"
+target="_blank"
+rel="noreferrer">
+GitHub
+</a>
+
+<a
+class="btn"
+href="https://linkedin.com/in/anuragak13"
+target="_blank"
+rel="noreferrer">
+LinkedIn
+</a>
+
+</div>
+</div>
+
+
+<!-- CLOUD VISUAL -->
+
+<div class="cloud-art reveal">
+
+<div class="orb"></div>
+
+<div class="orbit o1"></div>
+<div class="orbit o2"></div>
+<div class="orbit o3"></div>
+
+<div class="cloud-card">
+
+<div class="terminal">
+<span class="prompt">
+anurag@cloud:~$
+</span>
+whoami
+</div>
+
+<div class="cloud-icon">
+☁
+</div>
+
+<strong>
+Cloud • Security • Reliability
+</strong>
+
+<p style="
+color:var(--muted);
+font-size:.82rem;
+margin-top:8px">
+
+AWS · Linux · Docker · Zero Trust
+
+</p>
+
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<div class="container">
+
+<div class="eyebrow reveal">
+About Me
+</div>
+
+<div
+class="about-grid"
+style="margin-top:24px">
+
+<div class="card reveal">
+
+<h2 class="section-title">
+Cloud, security, and systems with a practical mindset.
+</h2>
+
+<p class="section-lead">
+Detail-oriented IT enthusiast with hands-on experience in cloud computing and working knowledge of AWS services and
+networking. Proficient in web technologies, scripting, and programming, with experience in modern development workflows,
+version control, and containerization. Demonstrates strong problem-solving, communication, and leadership skills. Quick
+learner with a passion for building scalable and impactful solutions
+
+</p>
+
+<div class="about-stat">
+
+<div class="stat">
+<strong>2026</strong>
+<span>Graduation</span>
+</div>
+
+<div class="stat">
+<strong>India</strong>
+<span>Based in</span>
+</div>
+
+<div class="stat">
+<strong>AWS</strong>
+<span>Cloud focus</span>
+</div>
+
+<div class="stat">
+<strong>ZT</strong>
+<span>Security focus</span>
+</div>
+
+</div>
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+What I bring
+</h3>
+
+<p class="section-lead">
+
+I enjoy building scalable solutions, analyzing network traffic,
+designing access controls, deploying cloud workloads, and
+learning new technologies. My experience combines cloud
+infrastructure with security and software development.
+
+</p>
+
+<div
+class="tags"
+style="margin-top:20px">
+
+<span class="tag">AWS</span>
+<span class="tag">Zero Trust</span>
+<span class="tag">Networking</span>
+<span class="tag">Linux</span>
+<span class="tag">Docker</span>
+<span class="tag">Automation</span>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- SKILLS -->
+
+<section class="section" id="skills">
+
+<div class="container">
+
+<div class="eyebrow reveal">
+Technical Stack
+</div>
+
+<h2 class="section-title reveal">
+Tools I work with
+</h2>
+
+<p class="section-lead reveal">
+
+A recruiter-friendly snapshot of my cloud,
+DevOps, programming, and development toolkit.
+
+</p>
+
+
+<div class="grid skills">
+
+
+<div class="card reveal">
+
+<h3>
+☁ Cloud
+</h3>
+
+<div class="tags">
+
+<span class="tag">AWS</span>
+<span class="tag">EC2</span>
+<span class="tag">S3</span>
+<span class="tag">VPC</span>
+<span class="tag">IAM</span>
+<span class="tag">CloudFront</span>
+<span class="tag">Route 53</span>
+<span class="tag">RDS</span>
+<span class="tag">CloudWatch</span>
+<span class="tag">CloudTrail</span>
+<span class="tag">AWS WAF</span>
+<span class="tag">AWS CLI</span>
+
+</div>
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+⚙ DevOps
+</h3>
+
+<div class="tags">
+
+<span class="tag">Docker</span>
+<span class="tag">Kubernetes</span>
+<span class="tag">Jenkins</span>
+<span class="tag">Terraform</span>
+<span class="tag">GitHub Actions</span>
+<span class="tag">CI/CD</span>
+
+</div>
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+⌘ Programming
+</h3>
+
+<div class="tags">
+
+<span class="tag">Java</span>
+<span class="tag">Python</span>
+<span class="tag">JavaScript</span>
+<span class="tag">SQL</span>
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+
+</div>
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+🛠 Tools
+</h3>
+
+<div class="tags">
+
+<span class="tag">Django</span>
+<span class="tag">Node.js</span>
+<span class="tag">Linux</span>
+<span class="tag">Git</span>
+<span class="tag">GitHub</span>
+<span class="tag">Bash</span>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="section" id="projects">
+
+<div class="container">
+
+<div class="eyebrow reveal">
+Selected Work
+</div>
+
+<h2 class="section-title reveal">
+Projects
+</h2>
+
+<p class="section-lead reveal">
+
+Hands-on projects demonstrating cloud architecture,
+secure deployment, APIs, databases, and containers.
+
+</p>
+
+
+<div class="filterbar reveal">
+
+<button
+class="filter active"
+data-filter="all">
+All
+</button>
+
+<button
+class="filter"
+data-filter="aws">
+AWS
+</button>
+
+<button
+class="filter"
+data-filter="devops">
+DevOps
+</button>
+
+<button
+class="filter"
+data-filter="python">
+Python
+</button>
+
+<button
+class="filter"
+data-filter="web">
+Web
+</button>
+
+</div>
+
+
+<div
+class="grid projects"
+id="projectGrid">
+
+
+<!-- PROJECT 1 -->
+
+<article
+class="card project reveal"
+data-tech="aws">
+
+<div class="project-top">
+
+<h3>
+Secure Static Website Hosting on AWS
+</h3>
+
+<span class="project-num">
+01
+</span>
+
+</div>
+
+<p>
+
+Designed and deployed a secure static website architecture
+using S3 and CloudFront, HTTPS through ACM, DNS through
+Route 53, AWS WAF security controls, and CloudWatch monitoring.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">S3</span>
+<span class="tag">CloudFront</span>
+<span class="tag">ACM</span>
+<span class="tag">Route 53</span>
+<span class="tag">WAF</span>
+<span class="tag">CloudWatch</span>
+
+</div>
+
+<div class="project-links">
+
+<a
+class="small-btn"
+href="#"
+onclick="return false">
+Live Demo ↗
+</a>
+
+<a
+class="small-btn"
+href="https://github.com/"
+target="_blank">
+GitHub ↗
+</a>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 2 -->
+
+<article
+class="card project reveal"
+data-tech="devops python web">
+
+<div class="project-top">
+
+<h3>
+Containerized Inventory & Order Management
+</h3>
+
+<span class="project-num">
+02
+</span>
+
+</div>
+
+<p>
+
+Production-oriented inventory and order management
+application with a modern frontend, backend APIs,
+PostgreSQL database, and containerized deployment
+using Docker Compose.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">React</span>
+<span class="tag">Python</span>
+<span class="tag">FastAPI/Flask</span>
+<span class="tag">PostgreSQL</span>
+<span class="tag">Docker</span>
+
+</div>
+
+<div class="project-links">
+
+<a
+class="small-btn"
+href="#"
+onclick="return false">
+Live Demo ↗
+</a>
+
+<a
+class="small-btn"
+href="https://github.com/"
+target="_blank">
+GitHub ↗
+</a>
+
+<a
+class="small-btn"
+href="#"
+onclick="return false">
+Docker Hub ↗
+</a>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 3 -->
+
+<article
+class="card project reveal"
+data-tech="python web">
+
+<div class="project-top">
+
+<h3>
+Lightweight Secure Mailer
+</h3>
+
+<span class="project-num">
+03
+</span>
+
+</div>
+
+<p>
+
+Lightweight web-based mailer application built with
+a Django backend and SQL database, focusing on secure
+communication and clean application architecture.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">Python</span>
+<span class="tag">Django</span>
+<span class="tag">SQL</span>
+
+</div>
+
+<div class="project-links">
+
+<a
+class="small-btn"
+href="https://github.com/"
+target="_blank">
+GitHub ↗
+</a>
+
+<a
+class="small-btn"
+href="#"
+onclick="return false">
+Live Demo ↗
+</a>
+
+</div>
+
+</article>
+
+</div>
+</div>
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="section" id="experience">
+
+<div class="container">
+
+<div class="eyebrow reveal">
+Experience
+</div>
+
+<h2 class="section-title reveal">
+Hands-on cloud & security experience
+</h2>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item reveal">
+
+<h3>
+Zero Trust Security Intern
+</h3>
+
+<div class="meta">
+Oct 2025 – Dec 2025 ·
+Zero Trust Security & EduSkill · Noida
+</div>
+
+<p>
+
+Designed a zero-trust framework with continuous identity
+verification and role-based access control. Analyzed
+network traffic, identified over-privileged IAM roles,
+and documented remediation steps for enterprise threat
+mitigation.
+
+</p>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<h3>
+AWS Cloud Intern
+</h3>
+
+<div class="meta">
+Jan 2024 – Mar 2024 ·
+AWS Cloud & EduSkill · Noida
+</div>
+
+<p>
+
+Provisioned applications on EC2, Lambda, and S3 using
+Infrastructure-as-Code templates. Built a serverless
+event-driven Lambda pipeline and reviewed EC2 sizing
+against workload metrics to reduce compute spend.
+
+</p>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<!-- CERTIFICATIONS -->
+
+<section
+class="section"
+id="certifications">
+
+<div class="container">
+
+<div class="eyebrow reveal">
+Certifications & Learning
+</div>
+
+<h2 class="section-title reveal">
+Validated technical foundation
+</h2>
+
+
+<div class="grid projects">
+
+
+<div class="card reveal">
+
+<h3>
+Zscaler Zero Trust Associate
+</h3>
+
+<p class="section-lead">
+ZTCA · Zscaler · 2025
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+Cisco CyberOps Associate
+</h3>
+
+<p class="section-lead">
+Cisco Networking Academy · 2024
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+AWS Academy Cloud Foundations
+</h3>
+
+<p class="section-lead">
+Amazon Web Services · 2024
+</p>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<!-- RESUME -->
+
+<section class="section" id="resume">
+
+<div class="container">
+
+<div class="eyebrow reveal">
+Resume
+</div>
+
+<h2 class="section-title reveal">
+Ready for the next cloud challenge.
+</h2>
+
+
+<div class="resume-grid">
+
+
+<div class="card reveal">
+
+<h3>
+Career Summary
+</h3>
+
+<p class="section-lead">
+
+Detail-oriented IT enthusiast with hands-on cloud
+computing experience, working knowledge of AWS and
+networking, plus experience in web technologies,
+scripting, version control, and containerization.
+
+</p>
+
+
+<h3 style="margin-top:22px">
+Education
+</h3>
+
+<p class="section-lead">
+
+B.Tech in Computer Science & Engineering
+<br>
+Galgotias University · Aug 2023 – Jun 2026
+
+</p>
+
+<p
+class="section-lead"
+style="margin-top:12px">
+
+Diploma in Computer Science & Engineering
+<br>
+Ambition Institute of Technology ·
+Aug 2020 – Jul 2023
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+Core Strengths
+</h3>
+
+<div
+class="tags"
+style="margin:14px 0 22px">
+
+<span class="tag">AWS</span>
+<span class="tag">Zero Trust</span>
+<span class="tag">Networking</span>
+<span class="tag">Linux</span>
+<span class="tag">Docker</span>
+<span class="tag">Python</span>
+<span class="tag">Java</span>
+<span class="tag">Git</span>
+
+</div>
+
+<a
+class="btn primary"
+href="mailto:akd130703@gmail.com?subject=Resume%20Request">
+
+Request Resume ↓
+
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<div class="eyebrow reveal">
+Contact
+</div>
+
+<h2 class="section-title reveal">
+Let’s build something reliable.
+</h2>
+
+
+<div
+class="contact-grid"
+style="margin-top:30px">
+
+
+<div class="reveal">
+
+<p class="section-lead">
+
+Open to entry-level opportunities in Cloud Engineering,
+AWS, DevOps, Cloud Support, and security-focused roles.
+
+</p>
+
+
+<div class="contact-list">
+
+
+<div class="contact-item">
+
+<small>Email</small>
+
+<a href="mailto:akd130703@gmail.com">
+akd130703@gmail.com
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<small>LinkedIn</small>
+
+<a
+href="https://linkedin.com/in/anuragak13"
+target="_blank">
+
+linkedin.com/in/anuragak13
+
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<small>GitHub</small>
+
+<a
+href="https://github.com/Anuragak13"
+target="_blank">
+
+github.com/Anuragak13
+
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<small>Location</small>
+
+India
+
+</div>
+
+
+</div>
+</div>
+
+
+<div class="card reveal">
+
+<form id="contactForm">
+
+
+<div class="form-row">
+
+<div>
+
+<input
+id="name"
+placeholder="Your name"
+required>
+
+<div class="error">
+Please enter your name.
+</div>
+
+</div>
+
+
+<div>
+
+<input
+id="email"
+type="email"
+placeholder="Email address"
+required>
+
+<div class="error">
+Please enter a valid email.
+</div>
+
+</div>
+
+</div>
+
+
+<input
+id="subject"
+placeholder="Subject"
+required>
+
+
+<textarea
+id="message"
+placeholder="Your message"
+required>
+</textarea>
+
+
+<button
+class="btn primary"
+type="submit">
+
+Send Message →
+
+</button>
+
+
+<div
+class="success"
+id="success">
+
+Thanks! Your message is ready to send.
+Connect your preferred email/form backend
+to make this live.
+
+</div>
+
+
+</form>
+
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-inner">
+
+<div>
+
+<strong>
+Anurag Kumar
+</strong>
+
+<br>
+
+<span>
+Cloud Engineer | AWS | DevOps
+</span>
+
+<br>
+
+<small>
+Building, learning, and deploying better technology.
+</small>
+
+</div>
+
+
+<div class="socials">
+
+<a
+href="https://github.com/Anuragak13"
+target="_blank">
+GitHub
+</a>
+
+<a
+href="https://linkedin.com/in/anuragak13"
+target="_blank">
+LinkedIn
+</a>
+
+<a
+href="mailto:akd130703@gmail.com">
+Email
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* THEME */
+
+const body = document.body;
+const themeBtn = document.getElementById("themeBtn");
+
+if(localStorage.getItem("theme") === "light"){
+    body.classList.add("light");
+}
+
+themeBtn.onclick = () => {
+
+    body.classList.toggle("light");
+
+    localStorage.setItem(
+        "theme",
+        body.classList.contains("light")
+        ? "light"
+        : "dark"
+    );
+
+};
+
+
+/* MOBILE MENU */
+
+const menu = document.getElementById("menuBtn");
+const links = document.getElementById("navLinks");
+
+menu.onclick = () => {
+
+    links.style.display =
+        links.style.display === "flex"
+        ? "none"
+        : "flex";
+
+    links.style.flexDirection = "column";
+    links.style.position = "absolute";
+    links.style.right = "12px";
+    links.style.top = "58px";
+    links.style.padding = "10px";
+    links.style.background = "var(--surface2)";
+    links.style.border = "1px solid var(--line)";
+    links.style.borderRadius = "14px";
+
+};
+
+
+/* SCROLL REVEAL */
+
+const obs = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("visible");
+
+            }
+
+        });
+
+    },
+    {
+        threshold:.12
+    }
+);
+
+document
+.querySelectorAll(".reveal")
+.forEach(element => obs.observe(element));
+
+
+/* ACTIVE NAVIGATION */
+
+const sections = [
+    ...document.querySelectorAll("main section")
+];
+
+const navLinks = [
+    ...document.querySelectorAll(".links a")
+];
+
+const navObs = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                navLinks.forEach(link => {
+
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") ===
+                        "#" + entry.target.id
+                    );
+
+                });
+
+            }
+
+        });
+
+    },
+
+    {
+        rootMargin:"-35% 0px -55% 0px"
+    }
+
+);
+
+sections.forEach(section =>
+    navObs.observe(section)
+);
+
+
+/* PROJECT FILTER */
+
+document
+.querySelectorAll(".filter")
+.forEach(button => {
+
+    button.onclick = () => {
+
+        document
+        .querySelectorAll(".filter")
+        .forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        const filter =
+            button.dataset.filter;
+
+        document
+        .querySelectorAll(".project")
+        .forEach(project => {
+
+            project.classList.toggle(
+                "hide",
+                filter !== "all" &&
+                !project.dataset.tech
+                .split(" ")
+                .includes(filter)
+            );
+
+        });
+
+    };
+
+});
+
+
+/* CONTACT FORM VALIDATION */
+
+document
+.getElementById("contactForm")
+.onsubmit = event => {
+
+    event.preventDefault();
+
+    let valid = true;
+
+    document
+    .querySelectorAll(
+        "#contactForm [required]"
+    )
+    .forEach(input => {
+
+        const error =
+            input.parentElement
+            .querySelector(".error");
+
+        const emailValid =
+            input.type !== "email" ||
+            /^\S+@\S+\.\S+$/.test(input.value);
+
+        if(
+            !input.value.trim() ||
+            !emailValid
+        ){
+
+            valid = false;
+
+            if(error){
+                error.style.display = "block";
+            }
+
+        }
+        else{
+
+            if(error){
+                error.style.display = "none";
+            }
+
+        }
+
+    });
+
+
+    if(valid){
+
+        document
+        .getElementById("success")
+        .style.display = "block";
+
+    }
+
+};
+
+</script>
+
+</body>
+</html>
